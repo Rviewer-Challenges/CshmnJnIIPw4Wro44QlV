@@ -1,0 +1,44 @@
+.wrapper {
+  min-width: 100%;
+  height: 100vh;
+  background: var(--bg-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+.mobile-wrapper {
+  position: relative;
+  background: var(--bg-color-mobile);
+  border-radius: 1.5rem;
+  max-width: 480px;
+  width: 480px;
+  overflow-x: hidden;
+}
+
+.mobile {
+  max-height: calc(100vh - 80px);
+  height: calc(100vh - 80px);
+  overflow-x: auto;
+  padding-top: 4rem;
+}
+
+app-header {
+  background: transparent;
+}
+
+@media (max-width: 480px) {
+  .wrapper {
+    padding: 0;
+  }
+  .mobile-wrapper {
+    border-radius: 0;
+    max-width: 100%;
+    height: 100vh;
+  }
+  .mobile {
+    max-height: 100vh;
+    height: 100vh;
+  }
+}
